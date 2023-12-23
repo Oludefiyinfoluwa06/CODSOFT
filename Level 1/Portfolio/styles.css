@@ -17,6 +17,10 @@ nav {
     box-shadow: 4px 0 7px #ccc;
 }
 
+#menu-bar {
+    display: none;
+}
+
 nav label {
     font-weight: bold;
     font-size: 20px;
@@ -267,4 +271,123 @@ footer ul {
 
 footer ul li {
     font-size: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+        position: relative;
+    }
+
+    #menu-bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #f8f8f8;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    nav ul a {
+        padding: 15px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    nav label {
+        order: -1;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul a:hover {
+        background-color: #ddd;
+    }
+
+    header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    header img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text {
+        margin-top: 20px;
+    }
+
+    .skills .my-skills {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .my-skills ul {
+        width: 300px;
+    }
+
+    .my-skills img {
+        width: 100%;
+        height: auto;
+    }
+
+    .projects .my-projects .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-me .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cont1 {
+        margin-right: 0;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
 }

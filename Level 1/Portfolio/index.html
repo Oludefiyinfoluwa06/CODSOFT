@@ -15,13 +15,14 @@
     <!-- Navbar -->
     <nav>
         <label>Olude Fiyinfoluwa</label>
-        <ul>
+        <ul id="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Skills</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <i class="fa fa-bars" id="menu-bar"></i>
     </nav>
 
     <!-- Header -->
@@ -207,5 +208,14 @@
             <p>Copyright &copy; 2023. All Rights Reserved | Designed by <a href="#" style="color: #fff; text-decoration: none;">Olude Fiyinfoluwa</a></p>
         </div>
     </footer>
+
+    
+    <script>
+        const menuBar = document.getElementById('menu-bar');
+        const navLinks = document.getElementById('nav-links');
+        menuBar.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        })
+    </script>
 </body>
 </html>
