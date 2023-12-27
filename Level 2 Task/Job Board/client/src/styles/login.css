@@ -1,0 +1,55 @@
+.login form {
+    padding: 40px;
+    width: 100%;
+}
+
+.login .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 15px 0 30px;
+}
+
+.info .name, .info .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.name .input-box, .contact .input-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.name input, .contact input {
+    flex-basis: 50%;
+    width: 100%;
+    padding: 3px;
+    outline: none;
+}
+
+.name label, .contact label {
+    font-size: 15px;
+}
+
+.login .submit-btn {
+    width: 100%;
+    background: #003399;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
