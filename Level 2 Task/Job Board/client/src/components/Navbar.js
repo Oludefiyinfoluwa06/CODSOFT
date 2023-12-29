@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { FaBriefcase, FaSearch, FaSignOutAlt, FaUser, FaUserCircle } from 'react-icons/fa';
+import { FaBriefcase, FaSignOutAlt, FaUser, FaUserCircle } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
@@ -54,15 +54,6 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={isMenuVisible ? "menu-items" : "menu-items hidden"}>
-        <form>
-          {/* <div className="search">
-            <input type="text" />
-            <button>Search</button>
-          </div> */}
-          <div className="search-icon">
-            <FaSearch />
-          </div>
-        </form>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">Browse Jobs</Link></li>

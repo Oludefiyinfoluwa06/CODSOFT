@@ -85,7 +85,11 @@ nav form input {
     text-transform: uppercase;
 }
 
-.menu-items .search-icon, .profile-modal .logout-icon {
+.menu-items ul li a:hover {
+    color: #003399;
+}
+
+.profile-modal .logout-icon {
     display: block;
     background: #f7f7f7;
     width: 200px;
@@ -117,6 +121,10 @@ nav form input {
     gap: 1rem;
 }
 
-.profile-modal a {
+.profile-modal ul li:hover, .profile-modal ul li a:hover {
+    color: #003399;
+}
+
+.profile-modal ul li a {
     color: #000;
 }
