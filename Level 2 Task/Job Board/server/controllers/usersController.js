@@ -31,7 +31,42 @@ const login = async (req, res) => {
     }
 }
 
+const getUserProfile = async (req, res) => {
+    const email = req.params;
+
+    if (!email) {
+        res.json({ error: "email is required" });
+    }
+
+    try {
+        const user = await User.findOne(email);
+
+        if (!user) {
+            res.json({ error: "user not found" });
+        }
+
+        res.json({
+            firstname: user.firstname,
+            lastname: user.lastname,
+            email: user.email,
+            phone: user.phone, 
+            username: user.username,
+            industry: user.industry, 
+            jobTitle: user.jobTitle, 
+            experience: user.experience, 
+            educationLevel: user.educationLevel, 
+            pjt: user.pjt, 
+            city: user.city, 
+            state: user.state, 
+            country: user.country
+        });
+    } catch (err) {
+        res.status(401).json({ error: err });
+    }
+}
+
 module.exports = {
     signup,
-    login
+    login,
+    getUserProfile
 }

@@ -27,6 +27,7 @@ const Login = () => {
             .then(res => {
                 localStorage.setItem("user", JSON.stringify(res.data));
                 navigate("/profile");
+                window.location.reload();
                 console.log(res);
             })
             .catch(err => {

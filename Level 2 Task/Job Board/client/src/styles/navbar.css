@@ -50,9 +50,9 @@ nav form input {
     cursor: pointer;
 }
 
-.menu-items {
+.menu-items, .profile-modal {
     width: 200px;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -64,10 +64,11 @@ nav form input {
     transition: .5s;
 }
 
-.menu-items.hidden {
+.menu-items.hidden, .profile-modal.hidden {
     opacity: 0;
-    top: 60px;
+    right: -100%;
 }
+
 .menu-items ul {
     flex-direction: column;
     align-items: center;
@@ -84,11 +85,38 @@ nav form input {
     text-transform: uppercase;
 }
 
-.menu-items .search-icon {
+.menu-items .search-icon, .profile-modal .logout-icon {
     display: block;
     background: #f7f7f7;
     width: 200px;
     text-align: center;
     padding: 10px;
     cursor: pointer;
+}
+
+.log a {
+    border-radius: 7px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.log a:hover {
+    color: #003399;
+}
+
+.log .user-icon {
+    cursor: pointer;
+}
+
+.profile-modal ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.profile-modal a {
+    color: #000;
 }

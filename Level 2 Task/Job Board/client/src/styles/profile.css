@@ -1,0 +1,35 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.personal-info, .account-info, .prof-info, .location {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.personal-info h2, .account-info h2, .prof-info h2, .location h2 {
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.profile a {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 6px;
+    background: #003399;
+    text-align: center;
+    color: #fff;
+}
