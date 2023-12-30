@@ -4,6 +4,7 @@
     background: #d6e4ff;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
@@ -15,18 +16,19 @@
 .hero .hero-img {
     width: 700px;
     height: 400px;
-    background: #003399;
+    background: transparent;
     border-radius: 30px;
     transform: rotate(45deg);
     margin-right: -300px;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .hero-img img {
     position: absolute;
-    top: -45px;
-    left: -20px;
+    top: -5px;
+    left: -120px;
     transform: rotate(-45deg);
     width: 120%;
     height: 120%;
@@ -65,6 +67,50 @@
     color: #fff;
 }
 
+/* Categories section */
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.categories .job-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.job-categories .category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    width: 150px;
+    height: 90px;
+    color: #000;
+}
+
+.job-categories .category:hover {
+    color: #003399;
+    border: 1px solid #003399;
+    transition: .5s;
+}
+
+.category .cat-icon {
+    font-size: 30px;
+}
+
+/* Media Query for responsiveness */
 @media screen and (max-width: 860px) {
     .home {
         padding: 0;
@@ -73,8 +119,7 @@
         align-items: center;
         justify-content: center;
         padding: 25px;
-        background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('../images/job.jpg');
-        color: #fff;
+        background: #d6e4ff;
     }
     .hero-text {
         text-align: center;

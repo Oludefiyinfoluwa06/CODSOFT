@@ -62,6 +62,8 @@ nav form input {
     box-shadow: 0 0 4px #ccc;
     opacity: 1;
     transition: .5s;
+    z-index: 2;
+    border-radius: 8px;
 }
 
 .menu-items.hidden, .profile-modal.hidden {
