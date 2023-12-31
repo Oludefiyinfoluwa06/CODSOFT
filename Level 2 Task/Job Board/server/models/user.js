@@ -58,7 +58,7 @@ const userSchema = new Schema({
 });
 
 userSchema.statics.signup = async function (firstname, lastname, email, phone, username, password, industry, jobTitle, experience, educationLevel, pjt, city, state, country) {
-    if (!email || !password) {
+    if (!email || !password || !firstname || !lastname || !username || !industry || !jobTitle || !experience || !pjt || !city || !state || !country) {
         throw Error("Input fields cannot be empty");
     }
 

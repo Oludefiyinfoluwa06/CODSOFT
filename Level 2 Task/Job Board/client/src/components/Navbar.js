@@ -56,9 +56,9 @@ const Navbar = () => {
       <div className={isMenuVisible ? "menu-items" : "menu-items hidden"}>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Browse Jobs</Link></li>
-          <li><Link to="/">Pages</Link></li>
-          <li><Link to="/">Blog</Link></li>
+          <li><Link to="/jobs">Browse Jobs</Link></li>
+          <li><Link to="/blogs">Blog</Link></li>
+          <li><Link to="/employer/employer-login">Be an Employer</Link></li>
         </ul>
       </div>
 

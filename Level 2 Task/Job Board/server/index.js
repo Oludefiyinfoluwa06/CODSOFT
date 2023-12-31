@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const usersRoute = require('./routes/usersRoute');
+const employersRoute = require('./routes/employersRoute');
 
 const app = express();
 const port = 5000;
@@ -21,5 +22,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/jobboard', usersRoute);
+app.use('/jobboard', employersRoute);
 
 app.get('/', (req, res) => res.send('Hello World!'));
