@@ -14,7 +14,7 @@ const EmployerSignup = () => {
         const employer = localStorage.getItem("employer");
 
         if (employer) {
-            navigate("/employer");
+            navigate("/post-a-job");
             return;
         }
 
@@ -25,7 +25,7 @@ const EmployerSignup = () => {
 
         await axios.post('http://localhost:5000/jobboard/employer/employer-signup', { companyName, email, password })
             .then(res => {
-                navigate('/login');
+                navigate('/employer/employer-login');
                 console.log(res);
             })
             .catch(err => {

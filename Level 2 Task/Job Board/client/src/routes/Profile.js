@@ -45,7 +45,7 @@ const Profile = () => {
         setState(res.data.state);
         setCountry(res.data.country);
         setPjt(res.data.pjt);
-        console.log(res);
+        // console.log(res);
       })
       .catch(err => {
         console.log(err);

@@ -38,8 +38,8 @@ const Categories = () => {
         {
             "id": 6,
             "icon": <FaPalette />,
-            "title": "Design & Creativity",
-            "path": "design-and-creativity"
+            "title": "Design",
+            "path": "design"
         },
     ];
 

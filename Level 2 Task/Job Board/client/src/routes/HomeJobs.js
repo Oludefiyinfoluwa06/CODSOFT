@@ -3,25 +3,28 @@ import { Link } from 'react-router-dom';
 import { FaGlobe } from 'react-icons/fa';
 import axios from 'axios';
 
-const Jobs = () => {
-    const [jobs, setJobs] = useState([]);
+const HomeJobs = () => {
+  const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:5000/jobboard/jobs')
             .then(res => {
-                setJobs(res.data.jobs.slice(0, 3));
+                setJobs(res.data.jobs);
                 // console.log(res);
             })
             .catch(err => {
                 console.log(err);
             });
-    }, [])
+    }, []);
 
     return (
         <div className='jobs'>
             <div className="title">
-                <h1>Popular Jobs</h1>
-                <Link to="/jobs">View all</Link>
+                <h1>Browse Jobs</h1>
+                <form action="">
+                    <input type="text" placeholder='Search for Jobs' />
+                    <button>Search</button>
+                </form>
             </div>
             <div className="featured-jobs">
                 {jobs.map(job => (
@@ -55,4 +58,4 @@ const Jobs = () => {
     );
 }
 
-export default Jobs;
+export default HomeJobs

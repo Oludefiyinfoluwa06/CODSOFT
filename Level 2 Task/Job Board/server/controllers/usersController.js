@@ -34,14 +34,14 @@ const getUserProfile = async (req, res) => {
     const email = req.params;
 
     if (!email) {
-        res.json({ error: "email is required" });
+        res.status(401).json({ error: "email is required" });
     }
 
     try {
         const user = await User.findOne(email);
 
         if (!user) {
-            res.json({ error: "user not found" });
+            res.status(401).json({ error: "user not found" });
         }
 
         res.json({

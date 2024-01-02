@@ -4,6 +4,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const usersRoute = require('./routes/usersRoute');
 const employersRoute = require('./routes/employersRoute');
+const jobsRoute = require('./routes/jobsRoute');
 
 const app = express();
 const port = 5000;
@@ -23,5 +24,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/jobboard', usersRoute);
 app.use('/jobboard', employersRoute);
+app.use('/jobboard', jobsRoute);
 
 app.get('/', (req, res) => res.send('Hello World!'));
