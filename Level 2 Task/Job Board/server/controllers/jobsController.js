@@ -30,11 +30,18 @@ const getJobDetails = async (req, res) => {
 }
 
 const searchJob = async(req, res) => {
-    const searchQuery = req.params;
+    const searchQuery = req.params.searchQuery;
 
-    await Job.find({ searchQuery })
-        .then(result => res.json({ result: result }))
-        .catch(err => res.json({ error: err }));
+    try {
+        const search = await Job.find({ title: { $regex: searchQuery, $options: 'i' } });
+        if (!search) {
+            res.status(404).json({ error: "Job not found" });
+        }
+
+        res.status(200).json({ searchResults: search });
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
 
 }
 

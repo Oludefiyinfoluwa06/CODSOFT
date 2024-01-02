@@ -1,0 +1,25 @@
+/* Add this to your existing styles or create a new CSS file */
+.search-bar {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.search-bar form {
+    display: inline-block;
+}
+
+.search-bar input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+}
+
+/* Styling for the search results */
+.showing {
+    text-align: center;
+    margin-top: 20px;
+}
+

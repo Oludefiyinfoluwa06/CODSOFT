@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGlobe } from 'react-icons/fa';
 import axios from 'axios';
+import Search from '../components/homeComponents/Search';
 
 const HomeJobs = () => {
-  const [jobs, setJobs] = useState([]);
+    const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:5000/jobboard/jobs')
@@ -21,10 +22,7 @@ const HomeJobs = () => {
         <div className='jobs'>
             <div className="title">
                 <h1>Browse Jobs</h1>
-                <form action="">
-                    <input type="text" placeholder='Search for Jobs' />
-                    <button>Search</button>
-                </form>
+                <Search />
             </div>
             <div className="featured-jobs">
                 {jobs.map(job => (

@@ -58,7 +58,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/jobs">Browse Jobs</Link></li>
           <li><Link to="/blogs">Blog</Link></li>
-          <li><Link to="/employer/employer-login">Be an Employer</Link></li>
+          <li><Link to="/post-a-job/employer-login">Post a Job</Link></li>
         </ul>
       </div>
 
