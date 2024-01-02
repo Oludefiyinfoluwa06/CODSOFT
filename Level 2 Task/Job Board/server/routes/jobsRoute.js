@@ -5,7 +5,6 @@ const router = require("express").Router();
 router.get('/jobs', getJobs);
 router.post('/jobs', postJob);
 router.get('/jobs/:jobId', getJobDetails);
-// router.get('/jobs/:email', getJobByCompany);
 router.get('/jobs/search/:searchQuery', searchJob);
 
 module.exports = router;

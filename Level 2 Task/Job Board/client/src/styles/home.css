@@ -135,8 +135,8 @@
 }
 
 .jobs .title form input {
-    padding: 7px 10px;
-    border-radius: 50px;
+    padding: 10px;
+    /* border-radius: 50px; */
     outline: none;
 }
 

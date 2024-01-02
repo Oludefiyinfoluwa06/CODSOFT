@@ -31,7 +31,6 @@ const HomeJobs = () => {
                     <Link to={`/jobs/${job._id}`} className="job" key={job._id}>
                         <div className="top">
                             <div className="job-cat">
-                                {/* <div className='job-cat-icon'>{ job.icon }</div> */}
                                 <p>{ job.category }</p>
                             </div>
                             <p className='job-title'>{ job.title }</p>

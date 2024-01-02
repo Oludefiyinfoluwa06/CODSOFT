@@ -29,25 +29,6 @@ const getJobDetails = async (req, res) => {
     }
 }
 
-// const getJobByCompany = async (req, res) => {
-//     const companyName = req.params.companyName;
-
-//     try {
-//         const jobs = await Job.findOne({ 'employer.companyName': companyName })
-//             .populate('employer', 'companyName email');
-
-//         if (!jobs || jobs.length === 0) {
-//             return res.status(404).json({ error: 'Jobs not found for the specified company name' });
-//         }
-
-//         res.json({ jobs });
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// }
-
-
-
 const searchJob = async(req, res) => {
     const searchQuery = req.params;
 
@@ -61,6 +42,5 @@ module.exports = {
     getJobs,
     postJob,
     getJobDetails,
-    // getJobByCompany,
     searchJob,
 }
