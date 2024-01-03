@@ -91,7 +91,7 @@ const applyForJob = async (req, res) => {
                 Cover Letter: ${coverLetter}
             `;
 
-            const resumeContent = fs.readFileSync(resume, 'utf8');
+            const resumeContent = fs.readFileSync(resume);
 
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -108,15 +108,16 @@ const applyForJob = async (req, res) => {
                 text: body,
                 attachments: [
                     {
-                        filename: name + '_resume.pdf',
+                        filename: name + "_resume",
                         content: resumeContent,
+                        contentType: 'application/pdf',
                     }
                 ]
             };
 
             transporter.sendMail(mailOptions, (err, info) => {
                 if (err) {
-                    console.error(err);
+                    console.log(err);
                     return res.status(500).json({ error: 'Failed to send email' });
                 }
 
@@ -126,7 +127,7 @@ const applyForJob = async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
-};
+}
 
 
 

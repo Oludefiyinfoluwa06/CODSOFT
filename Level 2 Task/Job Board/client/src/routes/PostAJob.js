@@ -14,6 +14,9 @@ const PostAJob = () => {
     const [email, setEmail] = useState(storedEmployerData.email || '');
 
     const [error, setError] = useState();
+    const [message, setMessage] = useState('');
+    const [submitting, setSubmitting] = useState(false);
+    const [submittingMessage, setSubmittingMessage] = useState('');
 
     const navigate = useNavigate();
 
@@ -29,6 +32,8 @@ const PostAJob = () => {
 
     const handleSubmit = async e => {
         e.preventDefault();
+        setSubmitting(true);
+        setSubmittingMessage("Your job is being posted");
 
         const validCategories = ["Information Technology", "Engineering", "Finance", "Healthcare", "Education", "Design"];
         const validJobTypes = ["Full-time", "Part-time", "Internship", "Contract"];
@@ -48,7 +53,9 @@ const PostAJob = () => {
                 if (res.data.error) {
                     setError("Input fields cannot be empty");
                 }
-                navigate('/post-a-job');
+                setSubmitting(false);
+                setMessage("Your job has been posted");
+                window.location.reload();
             })
             .catch(err => {
                 console.log(err);
@@ -57,6 +64,10 @@ const PostAJob = () => {
 
     return (
         <div className='post-job'>
+            <p style={{ width: '100%', position: 'fixed', color: '#fff', background: 'green', top: 0, left: 0, textAlign: 'center' }}>{message}</p>
+            {submitting && (
+                <p style={{ width: '100%', position: 'fixed', color: '#fff', background: '#007bff', top: 0, left: 0, textAlign: 'center' }}>{submittingMessage}</p>
+            )}
             <h2>Post a Job</h2>
             <p className='error-message'>{ error }</p>
             <form action="">
