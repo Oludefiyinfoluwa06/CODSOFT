@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { FaCheck } from 'react-icons/fa';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/apply.css';
 
@@ -14,8 +13,6 @@ const Apply = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [submitting, setSubmitting] = useState(false);
     const [submittingMessage, setSubmittingMessage] = useState('');
-
-    const navigate = useNavigate();
 
     const handleSubmit = async e => {
         e.preventDefault();
