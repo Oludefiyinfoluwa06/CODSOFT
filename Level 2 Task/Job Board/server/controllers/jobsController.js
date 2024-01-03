@@ -121,6 +121,7 @@ const applyForJob = async (req, res) => {
                     return res.status(500).json({ error: 'Failed to send email' });
                 }
 
+                fs.unlinkSync(resume);
                 res.status(200).json({ msg: "Application sent successfully" });
             });
         });
