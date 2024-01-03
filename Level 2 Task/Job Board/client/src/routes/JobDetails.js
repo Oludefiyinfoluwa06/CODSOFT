@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const JobDetails = () => {
@@ -10,7 +10,6 @@ const JobDetails = () => {
         const fetchJobDetails = async () => {
             try {
                 const response = await axios.get(`http://localhost:5000/jobboard/jobs/${jobId}`);
-                console.log(response);
 
                 setJobDetails(response.data.result);
             } catch (error) {
@@ -42,7 +41,7 @@ const JobDetails = () => {
                         <p>{jobDetails.jobDesc}</p>
                     </div>
                     <div className="application-form">
-                        <button>Apply Now</button>
+                        <Link to={`/apply/${jobId}`}><button>Apply Now</button></Link>
                     </div>
                 </div>
             ) : (

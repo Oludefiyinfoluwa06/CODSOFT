@@ -127,7 +127,6 @@ const Profile = () => {
           <p>{country}</p>
         </div>
       </div>
-      <a href="/editprofile">Edit Profile</a>
     </div>
   );
 }

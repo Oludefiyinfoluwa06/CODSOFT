@@ -28,7 +28,7 @@ const Signup = () => {
 
         await axios.post("http://localhost:5000/jobboard/user/signup", { firstname, lastname, email, phone, username, password, industry, jobTitle, experience, educationLevel, pjt, city, state, country })
             .then(res => {
-                navigate("/login");
+                navigate("/post-a-job/login");
                 console.log(res);
             })
             .catch(err => {

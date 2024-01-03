@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const Employer = require("../models/employer");
 
 const createToken = (_id) => {
-    return jwt.sign({ _id }, "6925Fi91408yint0220im06othy", { expiresIn: '1d' });
+    return jwt.sign({ _id }, process.env.SECRET, { expiresIn: '1d' });
 }
 
 const signup = async (req, res) => {

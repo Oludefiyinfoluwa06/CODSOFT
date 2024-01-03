@@ -1,0 +1,48 @@
+.apply-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 860px) {
+  .apply-form {
+    max-width: 100%;
+  }
+}

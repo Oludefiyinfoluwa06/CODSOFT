@@ -23,6 +23,8 @@ import PostAJob from './routes/PostAJob';
 import HomeLayout from './Layouts/HomeLayout';
 import HomeJobs from './routes/HomeJobs';
 import JobDetails from './routes/JobDetails';
+import ErrorElement from './components/ErrorElement';
+import Apply from './routes/Apply';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,12 +36,14 @@ const router = createBrowserRouter(
         <Route path='profile' element={<Profile />} />
         <Route path='jobs' element={<HomeJobs />} />
         <Route path='jobs/:jobId' element={<JobDetails />} />
+        <Route path='/apply/:jobId' element={<Apply />} />
       </Route>
       <Route path='/post-a-job' element={<EmployerLayout />}>
         <Route index element={<PostAJob />} />
         <Route path='employer-login' element={<EmployerLogin />} />
         <Route path='employer-signup' element={<EmployerSignup />} />
       </Route>
+      <Route path="*" element={<ErrorElement />} />
     </Route>
   )
 )

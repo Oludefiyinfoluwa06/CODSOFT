@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 const usersRoute = require('./routes/usersRoute');
 const employersRoute = require('./routes/employersRoute');
 const jobsRoute = require('./routes/jobsRoute');
