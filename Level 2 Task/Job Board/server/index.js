@@ -27,4 +27,4 @@ app.use('/jobboard', usersRoute);
 app.use('/jobboard', employersRoute);
 app.use('/jobboard', jobsRoute);
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.json('Hello World!'));
