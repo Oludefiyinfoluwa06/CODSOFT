@@ -23,7 +23,7 @@ const EmployerSignup = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        await axios.post('http://localhost:5000/jobboard/employer/employer-signup', { companyName, email, password })
+        await axios.post('https://jobboard-server.vercel.app/jobboard/employer/employer-signup', { companyName, email, password })
             .then(res => {
                 navigate('/employer/employer-login');
                 console.log(res);

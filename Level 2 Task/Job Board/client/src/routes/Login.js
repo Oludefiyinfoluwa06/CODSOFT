@@ -23,7 +23,7 @@ const Login = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        await axios.post('http://localhost:5000/jobboard/user/login', { email, password })
+        await axios.post('https://jobboard-server.vercel.app/jobboard/user/login', { email, password })
             .then(res => {
                 localStorage.setItem("user", JSON.stringify(res.data));
                 navigate("/profile");

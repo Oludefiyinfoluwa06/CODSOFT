@@ -23,7 +23,7 @@ const HomeJobs = () => {
     const handleSearch = async e => {
         e.preventDefault();
 
-        await axios.get(`http://localhost:5000/jobboard/jobs/search/${searchQuery}`)
+        await axios.get(`https://jobboard-server.vercel.app/jobboard/jobs/search/${searchQuery}`)
             .then(res => {
                 setSearchResults(res.data.searchResults);
                 // console.log(res);

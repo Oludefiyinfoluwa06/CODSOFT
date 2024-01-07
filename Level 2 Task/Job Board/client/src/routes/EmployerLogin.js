@@ -22,7 +22,7 @@ const EmployerLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/jobboard/employer/employer-login', { email, password });
+      const res = await axios.post('https://jobboard-server.vercel.app/jobboard/employer/employer-login', { email, password });
       localStorage.setItem("employer", JSON.stringify(res.data));
       navigate('/post-a-job');
       window.location.reload();
