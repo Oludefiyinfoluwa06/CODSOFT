@@ -48,7 +48,7 @@ const PostAJob = () => {
             return;
         }
 
-        await axios.post('https://jobboard-server.vercel.app/jobboard/jobs', { title, category, location, jobType, jobDesc, companyName, email, employer: { _id: storedEmployerData.employerId, }, })
+        await axios.post('http://localhost:5000/jobboard/jobs', { title, category, location, jobType, jobDesc, companyName, email, employer: { _id: storedEmployerData.employerId, }, })
             .then(res => {
                 if (res.data.error) {
                     setError("Input fields cannot be empty");

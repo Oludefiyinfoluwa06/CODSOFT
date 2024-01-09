@@ -25,7 +25,7 @@ const Apply = () => {
         formData.append('resume', resume);
         formData.append('coverLetter', coverLetter);
 
-        axios.post(`https://jobboard-server.vercel.app/jobboard/jobs/apply/${jobId}`, formData)
+        axios.post(`http://localhost:5000/jobboard/jobs/apply/${jobId}`, formData)
             .then(res => {
                 setSubmitting(false);
                 setMessage(res.data.msg);

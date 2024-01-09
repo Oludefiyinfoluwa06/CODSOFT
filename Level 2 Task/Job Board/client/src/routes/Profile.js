@@ -30,7 +30,7 @@ const Profile = () => {
       return;
     }
 
-    axios.get(`https://jobboard-server.vercel.app/jobboard/user/${user.email}`)
+    axios.get(`http://localhost:5000/jobboard/user/${user.email}`)
       .then(res => {
         setFirstname(res.data.firstname);
         setLastname(res.data.lastname);

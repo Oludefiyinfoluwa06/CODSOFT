@@ -26,9 +26,9 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await axios.post("https://jobboard-server.vercel.app/jobboard/user/signup", { firstname, lastname, email, phone, username, password, industry, jobTitle, experience, educationLevel, pjt, city, state, country })
+        await axios.post("http://localhost:5000/jobboard/user/signup", { firstname, lastname, email, phone, username, password, industry, jobTitle, experience, educationLevel, pjt, city, state, country })
             .then(res => {
-                navigate("/post-a-job/login");
+                navigate("/login");
                 console.log(res);
             })
             .catch(err => {
