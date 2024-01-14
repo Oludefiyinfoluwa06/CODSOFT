@@ -16,7 +16,7 @@ mongoose.connect(dbURI)
     .catch(err => console.log(err));
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://jobboard-app.vercel.app/",
     credentials: true
 }));
 app.use(cookieParser());
