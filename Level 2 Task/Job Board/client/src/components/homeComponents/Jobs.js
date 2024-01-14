@@ -7,7 +7,7 @@ const Jobs = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/jobboard/jobs')
+        axios.get('https://jobboard-server.vercel.app/jobboard/jobs')
             .then(res => {
                 setJobs(res.data.jobs.slice(0, 3));
                 // console.log(res);
