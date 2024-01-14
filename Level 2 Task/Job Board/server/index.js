@@ -12,7 +12,7 @@ const port = 5000;
 
 const dbURI = "mongodb+srv://timothy:timothy@jobboard.runaqaw.mongodb.net/users?retryWrites=true&w=majority";
 mongoose.connect(dbURI)
-    .then(res => app.listen(port, () => console.log(`Server running on port ${port}!`)))
+    .then(res => console.log(res))
     .catch(err => console.log(err));
 
 app.use(cors({
