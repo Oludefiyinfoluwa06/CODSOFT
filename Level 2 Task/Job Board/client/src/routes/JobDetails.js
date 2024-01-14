@@ -9,7 +9,7 @@ const JobDetails = () => {
     useEffect(() => {
         const fetchJobDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/jobboard/jobs/${jobId}`);
+                const response = await axios.get(`https://jobboard-server.vercel.app/jobboard/jobs/${jobId}`);
 
                 setJobDetails(response.data.result);
             } catch (error) {
