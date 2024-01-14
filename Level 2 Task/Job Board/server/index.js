@@ -11,9 +11,9 @@ const app = express();
 const port = 5000;
 
 const dbURI = "mongodb+srv://timothy:timothy@jobboard.runaqaw.mongodb.net/users?retryWrites=true&w=majority";
-mongoose.connect(dbURI)
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+mongoose.connect(dbURI);
+    // .then(res => console.log(res))
+    // .catch(err => console.log(err));
 
 app.use(cors({
     origin: "https://jobboard-app.vercel.app/",
