@@ -15,10 +15,7 @@ mongoose.connect(dbURI);
     // .then(res => console.log(res))
     // .catch(err => console.log(err));
 
-app.use(cors({
-    origin: "https://jobboard-app.vercel.app/",
-    credentials: true
-}));
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
